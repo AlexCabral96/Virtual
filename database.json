@@ -1,0 +1,20 @@
+[
+  {
+    "Total": 9,
+    "Name": "Mewtwo",
+    "Type": "Mewtwo",
+    "Category": "Fancy",
+    "Shiny": true,
+    "Pack": "Mythical Island",
+    "Points": 500
+  },
+  {
+    "Total": 8,
+    "Name": "Charizard",
+    "Type": "Charizard",
+    "Category": "Fancy",
+    "Shiny": false,
+    "Pack": "Solgaleo",
+    "Points": 150
+  }
+]
