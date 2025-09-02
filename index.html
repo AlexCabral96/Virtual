@@ -1,67 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Pokémon Cards</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-family: Arial, sans-serif;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #f4f4f4;
-    }
-    .Mewtwo { background-color: purple; color: white; }
-    .Charizard { background-color: red; color: white; }
-    .Pikachu { background-color: yellow; color: black; }
-    .Shiny { font-weight: bold; }
-    /* Add more styles for other categories/colors */
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Overview Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h1>Pokémon Cards Table</h1>
-  <table id="cardsTable">
-    <thead>
-      <tr>
-        <th>Total</th>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Category</th>
-        <th>Shiny</th>
-        <th>Pack</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Rows will be inserted here by JS -->
-    </tbody>
-  </table>
 
-  <script>
-    fetch('database.json')
-      .then(response => response.json())
-      .then(data => {
-        const tbody = document.querySelector('#cardsTable tbody');
-        data.forEach(card => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td>${card.Total}</td>
-            <td class="${card.Type}">${card.Name}</td>
-            <td>${card.Type}</td>
-            <td>${card.Category}</td>
-            <td class="${card.Shiny ? 'Shiny' : ''}">${card.Shiny ? '★' : ''}</td>
-            <td>${card.Pack}</td>
-            <td>${card.Points}</td>
-          `;
-          tbody.appendChild(tr);
-        });
-      });
-  </script>
+<body>
+  <!-- Left Column -->
+  <div class="column left">
+    <textarea class="notes" id="notesArea" placeholder="Write your notes here..."></textarea>
+
+    <!-- Pack + Trade side by side -->
+    <div class="side-by-side-tables">
+      <div class="table-wrapper">
+        <h3>Pack points</h3>
+        <table id="packPointsTable">
+          <thead>
+            <tr>
+              <th>Rarity</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="table-wrapper">
+        <h3>Trade points</h3>
+        <table id="tradePointsTable">
+          <thead>
+            <tr>
+              <th>Rarity</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pack points available -->
+    <div class="table-wrapper">
+      <h3>Pack points available</h3>
+      <table id="packPointsAvailableTable">
+        <thead>
+          <tr>
+            <th>Pack Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Middle Column -->
+  <div class="column middle">
+    <h2 class="column-title">Overview</h2>
+    <div class="tables-row">
+      <div class="table-wrapper">
+        <h3>Total</h3>
+        <table id="totalTable">
+          <thead>
+            <tr>
+              <th>Card</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="table-wrapper">
+        <h3>Ugly cards</h3>
+        <table id="uglyCardsTable">
+          <thead>
+            <tr>
+              <th>Card</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="table-wrapper">
+        <h3>Fancy cards</h3>
+        <table id="fancyCardsTable">
+          <thead>
+            <tr>
+              <th>Card</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="column right">
+    <h2 style="text-align:center; color:#fff;">Sets</h2>
+    <div class="right-tables" id="right-column">
+      <!-- JS will inject all dataSets tables here -->
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
 </body>
+
 </html>
