@@ -6,7 +6,6 @@ const dataSets = {
     { id: 36, card: "Latias", bucket: "Suicune", rarity: "◊◊◊" },
     { id: 37, card: "Latios", bucket: "Suicune", rarity: "◊◊◊" },
     { id: 42, card: "Poliwrath ex", bucket: "Suicune", rarity: "◊◊◊◊" },
-    { id: 53, card: "Skrelp", bucket: "Suicune", rarity: "◊" },
     { id: 67, card: "Inflatable Boat", bucket: "Suicune", rarity: "◊◊" },
     { id: 75, card: "Latios", bucket: "Suicune", rarity: "☆" },
     { id: 76, card: "Phanpy", bucket: "Suicune", rarity: "☆" },
@@ -32,7 +31,6 @@ const dataSets = {
     { id: 99, card: "Gabite", bucket: "Suicune", rarity: "✷" },
     { id: 100, card: "Paldean Wooper", bucket: "Suicune", rarity: "✷" },
     { id: 101, card: "Infernape ex", bucket: "Suicune", rarity: "✷✷" },
-    { id: 102, card: "Mew ex", bucket: "Suicune", rarity: "✷✷" },
     { id: 103, card: "Garchomp ex", bucket: "Suicune", rarity: "✷✷" },
     { id: 104, card: "Paldean Clodsire ex", bucket: "Suicune", rarity: "✷✷" },
     { id: 105, card: "Mantyke", bucket: "Suicune", rarity: "♛" }
@@ -327,4 +325,5 @@ const dataSets = {
     { id: 285, card: "Pikachu ex", bucket: "Pika/Char/Mew2", rarity: "♛" },
     { id: 286, card: "Mewtwo ex", bucket: "Pika/Char/Mew2", rarity: "♛" },
   ]
+
 };
