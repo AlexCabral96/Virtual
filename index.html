@@ -59,6 +59,15 @@
 
   <!-- Middle Column -->
   <div class="column middle">
+    <!-- Question + buttons -->
+    <div class="middle-question">
+      <h2>What do you want to see in detail?</h2>
+      <div class="middle-buttons">
+        <button id="btn-missing">Missing cards</button>
+        <button id="btn-missions">Missions</button>
+        <button id="btn-trade">For trade cards</button>
+      </div>
+    </div>
     <h2 class="column-title">Overview</h2>
     <div class="tables-row">
       <div class="table-wrapper">
@@ -102,15 +111,43 @@
 
   <!-- Right Column -->
   <div class="column right">
-    <h2 style="text-align:center; color:#fff;">Sets</h2>
-    <div class="right-tables" id="right-column">
-      <!-- JS will inject all dataSets tables here -->
+    <!-- Missing cards page (your current default) -->
+    <div class="right-page" id="missing-cards">
+      <h2 id="right-column-title" style="text-align:center; color:#fff;">Missing cards</h2>
+      <div class="right-tables" id="right-column">
+        <!-- JS will inject all dataSets tables here -->
+      </div>
+    </div>
+
+    <!-- Missions Page -->
+    <div class="right-page" id="missions" style="display: none;">
+      <h2 style="text-align:center; color:#fff;">Missions</h2>
+      <p class="page-source">
+        Source: <a href="https://www.eurogamer.net/pokemon-tcg-pocket-secret-missions" target="_blank">Pokemon TCG
+          Pokect Missions</a>
+      </p>
+      <div class="missions-content">
+        <!-- You can fill this later with mission tables, lists, etc -->
+        <p style="text-align:center; color:#aaa;">(Mission details will appear here)</p>
+      </div>
+    </div>
+
+    <!-- For trade page (placeholder for now) -->
+    <div class="right-page" id="for-trade" style="display:none;">
+      <h2 style="text-align:center; color:#fff;">For Trade Cards</h2>
+      <p style="text-align:center;">For Trade Cards page (coming soon)</p>
     </div>
   </div>
 
+
   <script src="data.js"></script>
+  <script src="dataMissions.js"></script>
   <script src="script.js"></script>
 
 </body>
 
 </html>
+
+
+
+<!-- now, the worst part. is it possible to background the rows into green? but only the rows that don't have the card present in the dataSets variable -->

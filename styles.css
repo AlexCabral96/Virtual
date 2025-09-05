@@ -1,4 +1,6 @@
-/* Global dark theme */
+/* ================================
+   Global Styles (Dark Theme)
+================================ */
 body {
     display: flex;
     margin: 0;
@@ -10,29 +12,34 @@ body {
     min-width: 0; /* allow horizontal scroll on right column */
 }
 
-/* Columns */
+/* ================================
+   Generic Column Styles
+================================ */
 .column {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Left Column */
+/* ================================
+   Left Column
+================================ */
 .column.left {
-    width: 330px; /* fixed width */
-    flex-shrink: 0; /* prevent shrinking */
+    width: 330px;          /* fixed width */
+    flex-shrink: 0;        /* prevent shrinking */
     padding: 10px;
     box-sizing: border-box;
     background: #2a2a2a;
     border-radius: 8px;
 }
 
+/* Notes textarea */
 .column.left textarea.notes {
     resize: vertical;
     max-width: 100%;
     width: 100%;
-    box-sizing: border-box;
     height: 60px;
+    box-sizing: border-box;
     background: #1e1e1e;
     color: #e0e0e0;
     border: 1px solid #444;
@@ -40,7 +47,7 @@ body {
     padding: 6px;
 }
 
-/* Side-by-side tables in left column */
+/* Side-by-side tables inside left column */
 .side-by-side-tables {
     display: flex;
     width: 100%;
@@ -51,16 +58,19 @@ body {
     flex: 1;
 }
 
-/* Middle Column */
+/* ================================
+   Middle Column
+================================ */
 .column.middle {
-    width: 800px; /* fixed width */
-    flex-shrink: 0; /* prevent shrinking */
+    width: 800px;          /* fixed width */
+    flex-shrink: 0;        /* prevent shrinking */
     padding: 10px;
     box-sizing: border-box;
     background: #2a2a2a;
     border-radius: 8px;
 }
 
+/* Section titles in middle column */
 .column-title {
     text-align: center;
     font-size: 16px;
@@ -69,6 +79,7 @@ body {
     color: #ffffff;
 }
 
+/* Tables arranged in rows */
 .tables-row {
     display: flex;
     gap: 12px;
@@ -79,31 +90,87 @@ body {
     min-width: 240px;
 }
 
-/* Right column */
-.column.right {
-    flex: 1; /* take remaining space */
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto; /* horizontal scroll */
-    white-space: nowrap;
-    padding-bottom: 10px;
-    background: #2a2a2a;
-    border-radius: 8px;
-    padding: 10px;
+/* Middle column question + buttons */
+.middle-question {
+    text-align: center;
+    margin-bottom: 16px;
 }
 
-/* Right-side tables */
+.middle-question h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+}
+
+.middle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.middle-buttons button {
+    background: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.middle-buttons button:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.middle-buttons button:active {
+    background: #555;
+    transform: translateY(0);
+}
+
+/* ================================
+   Right Column
+================================ */
+.column.right {
+    flex: 1;               /* take remaining space */
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;      /* horizontal scroll */
+    white-space: nowrap;
+    padding: 10px 10px 10px 10px;
+    background: #2a2a2a;
+    border-radius: 8px;
+}
+
+/* Multiple right-side "pages" (only one visible at a time) */
+.right-page {
+    flex: 1;
+}
+
+/* Right-side tables wrapper */
 .right-tables {
-    display: inline-flex; /* keep tables in a row */
+    display: inline-flex;  /* keep tables in a row */
     gap: 12px;
 }
 
 .right-tables .table-wrapper {
-    width: 600px;
-    flex-shrink: 0; /* prevent shrinking */
+    width: 400px;
+    flex-shrink: 0;        /* prevent shrinking */
 }
 
-/* Table wrapper title */
+/* Right-side tables sizing */
+.right-tables .table-wrapper table {
+    table-layout: auto;    /* let browser size columns by content */
+    width: 100%;           /* stretch full width of wrapper */
+    white-space: nowrap;   /* prevent breaking text in cells */
+}
+
+/* ================================
+   Tables Styling
+================================ */
 .table-wrapper h3 {
     margin: 0 0 4px 0;
     font-size: 14px;
@@ -112,7 +179,6 @@ body {
     color: #ffffff;
 }
 
-/* Tables styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -143,12 +209,14 @@ tr:hover {
     background: #3a3a3a;
 }
 
-/* Specific widths */
+/* Special case: packPoints table */
 #packPointsAvailableTable {
     width: 100%;
 }
 
-/* Scrollbar styling */
+/* ================================
+   Scrollbar Styling
+================================ */
 ::-webkit-scrollbar {
     height: 10px;
 }
@@ -164,4 +232,27 @@ tr:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #666;
+}
+
+/* Page source link (for Missions, Trade, etc.) */
+.page-source {
+    text-align: center;
+    font-size: 13px;
+    margin: 6px 0 16px 0;
+    color: #aaa;
+}
+
+.page-source a {
+    color: #4aa3ff;
+    text-decoration: none;
+}
+
+.page-source a:hover {
+    text-decoration: underline;
+}
+
+/* Highlight rows for missing cards */
+.missing-card {
+    background-color: #2e7d32 !important; /* green background */
+    color: #fff; /* white text for readability */
 }
