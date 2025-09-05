@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fillTable('tradePointsTable', tradePointsData, ['symbol', 'value']);
     fillTable('packPointsAvailableTable', packPointsAvailableData, ['pack', 'value']);
 
-    const uglyRarities = ["◊", "◊◊", "◊◊◊"];
+    const uglyRarities = ["◊", "◊◊", "◊◊◊", "◊◊◊◊"];
 
     function computeBuckets(data) {
         const result = { total: {}, ugly: {}, fancy: {} };
@@ -105,4 +105,5 @@ document.addEventListener("DOMContentLoaded", () => {
         wrapper.appendChild(table);
         rightColumn.appendChild(wrapper);
     });
+
 });
