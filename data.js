@@ -4,8 +4,6 @@ const dataSets = {
     { id: 25, card: "Raikou ex", bucket: "Suicune", rarity: "◊◊◊◊" },
     { id: 33, card: "Mismagius", bucket: "Suicune", rarity: "◊◊" },
     { id: 36, card: "Latias", bucket: "Suicune", rarity: "◊◊◊" },
-    { id: 37, card: "Latios", bucket: "Suicune", rarity: "◊◊◊" },
-    { id: 42, card: "Poliwrath ex", bucket: "Suicune", rarity: "◊◊◊◊" },
     { id: 67, card: "Inflatable Boat", bucket: "Suicune", rarity: "◊◊" },
     { id: 75, card: "Latios", bucket: "Suicune", rarity: "☆" },
     { id: 76, card: "Phanpy", bucket: "Suicune", rarity: "☆" },
@@ -37,19 +35,12 @@ const dataSets = {
   ],
   "a4": [
     { id: 5, card: "Tangrowth", bucket: "Ho-Oh", rarity: "◊◊◊" },
-    { id: 33, card: "Entei", bucket: "Ho-Oh", rarity: "◊◊◊" },
-    { id: 41, card: "Horsea", bucket: "Lugia", rarity: "◊" },
     { id: 45, card: "Gyarados", bucket: "Lugia", rarity: "◊◊◊" },
-    { id: 56, card: "Octillery", bucket: "Lugia", rarity: "◊◊◊" },
-    { id: 60, card: "Corphish", bucket: "Lugia", rarity: "◊" },
-    { id: 66, card: "Pichu", bucket: "Lugia", rarity: "◊◊◊" },
     { id: 71, card: "Raikou", bucket: "Ho-Oh", rarity: "◊◊◊" },
-    { id: 74, card: "Slowking", bucket: "Lugia", rarity: "◊◊" },
     { id: 104, card: "Pupitar", bucket: "Ho-Oh", rarity: "◊" },
     { id: 110, card: "Spinarak", bucket: "Ho-Oh", rarity: "◊" },
     { id: 128, card: "Klinklang", bucket: "Ho-Oh", rarity: "◊◊◊" },
     { id: 161, card: "Hiker", bucket: "Ho-Oh", rarity: "◊◊" },
-    { id: 162, card: "Chikorita", bucket: "Lugia", rarity: "☆" },
     { id: 163, card: "Bellossom", bucket: "Lugia", rarity: "☆" },
     { id: 165, card: "Cyndaquil", bucket: "Lugia", rarity: "☆" },
     { id: 166, card: "Magby", bucket: "Ho-Oh", rarity: "☆" },
@@ -64,7 +55,6 @@ const dataSets = {
     { id: 186, card: "Shuckle ex", bucket: "Lugia", rarity: "☆☆" },
     { id: 188, card: "Kingdra ex", bucket: "Lugia", rarity: "☆☆" },
     { id: 189, card: "Lanturn ex", bucket: "Lugia", rarity: "☆☆" },
-    { id: 190, card: "Espeon ex", bucket: "Lugia", rarity: "☆☆" },
     { id: 191, card: "Donphan ex", bucket: "Ho-Oh", rarity: "☆☆" },
     { id: 192, card: "Crobat ex", bucket: "Ho-Oh", rarity: "☆☆" },
     { id: 194, card: "Skarmory ex", bucket: "Ho-Oh", rarity: "☆☆" },
@@ -327,3 +317,4 @@ const dataSets = {
   ]
 
 };
+
