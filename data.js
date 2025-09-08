@@ -3,7 +3,6 @@ const dataSets = {
     { id: 10, card: "Entei ex", bucket: "Suicune", rarity: "◊◊◊◊" },
     { id: 25, card: "Raikou ex", bucket: "Suicune", rarity: "◊◊◊◊" },
     { id: 33, card: "Mismagius", bucket: "Suicune", rarity: "◊◊" },
-    { id: 36, card: "Latias", bucket: "Suicune", rarity: "◊◊◊" },
     { id: 75, card: "Latios", bucket: "Suicune", rarity: "☆" },
     { id: 76, card: "Phanpy", bucket: "Suicune", rarity: "☆" },
     { id: 78, card: "Jumpluff ex", bucket: "Suicune", rarity: "☆☆" },
@@ -33,10 +32,8 @@ const dataSets = {
     { id: 105, card: "Mantyke", bucket: "Suicune", rarity: "♛" }
   ],
   "a4": [
-    { id: 5, card: "Tangrowth", bucket: "Ho-Oh", rarity: "◊◊◊" },
     { id: 45, card: "Gyarados", bucket: "Lugia", rarity: "◊◊◊" },
     { id: 71, card: "Raikou", bucket: "Ho-Oh", rarity: "◊◊◊" },
-    { id: 110, card: "Spinarak", bucket: "Ho-Oh", rarity: "◊" },
     { id: 128, card: "Klinklang", bucket: "Ho-Oh", rarity: "◊◊◊" },
     { id: 161, card: "Hiker", bucket: "Ho-Oh", rarity: "◊◊" },
     { id: 163, card: "Bellossom", bucket: "Lugia", rarity: "☆" },
@@ -313,4 +310,5 @@ const dataSets = {
   ]
 
 };
+
 
